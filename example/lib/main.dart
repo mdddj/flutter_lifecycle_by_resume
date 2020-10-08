@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> with ResumeMixin<MyApp>{
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('用户息屏后,重新亮屏执行插件'),
+          title: const Text('测试'),
         ),
         body: Container(),
       ),

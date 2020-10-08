@@ -1,14 +1,51 @@
 # flutter_lifecycle_by_resume
 
-flutter 息屏显示执行事件
+在用户息灭屏幕后,又重新亮屏，即原生安卓生命周期onResume方法,提供了执行该生命周期代码的功能。
 
-## Getting Started
+### 快速使用
+将with ResumeMixin<MyWidget> 添加到您的State<MyWidget>类中，然后实现void onResume(BuildContext context)abstract方法。当设备亮屏后，将调用此方法中的代码
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_lifecycle_by_resume/minix.dart';
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+void main() {
+  runApp(MyApp());
+}
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> with ResumeMixin<MyApp>{
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('测试'),
+        ),
+        body: Container(),
+      ),
+    );
+  }
+
+  @override
+  void onResume(BuildContext context) {
+    // TODO: implement onResume
+    /// 此处写亮屏后的逻辑代码
+    print("todo in this");
+  }
+}
+
+```
+
+### 建议反馈
+请加qq群1102781545
