@@ -3,7 +3,7 @@
 # flutter_lifecycle_by_resume
 
 
-![https://pub.dev/packages/flutter_lifecycle_by_resume](https://badgen.net/pub/v/flutter_lifecycle_by_resume)
+[![pub](https://badgen.net/pub/v/flutter_lifecycle_by_resume)](https://pub.dev/packages/flutter_lifecycle_by_resume)
 
 在用户息灭屏幕后,又重新亮屏，即原生安卓生命周期onResume方法,提供了执行该生命周期代码的功能。
 
