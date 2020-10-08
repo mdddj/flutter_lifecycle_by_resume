@@ -1,6 +1,16 @@
+
+
 # flutter_lifecycle_by_resume
 
+
+![https://pub.dev/packages/flutter_lifecycle_by_resume](https://badgen.net/pub/v/flutter_lifecycle_by_resume)
+
 在用户息灭屏幕后,又重新亮屏，即原生安卓生命周期onResume方法,提供了执行该生命周期代码的功能。
+
+### 添加依赖
+```dart
+flutter_lifecycle_by_resume:^最新版本
+```
 
 ### 快速使用
 将with ResumeMixin<MyWidget> 添加到您的State<MyWidget>类中，然后实现void onResume(BuildContext context)abstract方法。当设备亮屏后，将调用此方法中的代码
@@ -49,3 +59,6 @@ class _MyAppState extends State<MyApp> with ResumeMixin<MyApp>{
 
 ### 建议反馈
 请加qq群1102781545
+
+
+[]: https://pub.dev/packages/flutter_lifecycle_by_resume
