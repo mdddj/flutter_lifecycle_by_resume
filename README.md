@@ -9,7 +9,7 @@
 
 ### 添加依赖
 ```dart
-flutter_lifecycle_by_resume:^最新版本
+flutter_lifecycle_by_resume : ^0.0.3
 ```
 
 ### 快速使用
@@ -59,6 +59,3 @@ class _MyAppState extends State<MyApp> with ResumeMixin<MyApp>{
 
 ### 建议反馈
 请加qq群1102781545
-
-
-[]: https://pub.dev/packages/flutter_lifecycle_by_resume

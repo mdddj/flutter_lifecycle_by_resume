@@ -1,6 +1,6 @@
 name: flutter_lifecycle_by_resume
 description: flutter 息屏显示执行事件
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/mdddj/shangmi_scan_data_flutter.git
 
 environment:
