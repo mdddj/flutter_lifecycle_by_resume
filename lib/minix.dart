@@ -4,7 +4,7 @@ import 'lifecycle_event_handler.dart';
 
 mixin ResumeMixin<T extends StatefulWidget> on State<T> {
 
-  LifecycleEventHandler _lifecycleEventHandler;
+  late LifecycleEventHandler _lifecycleEventHandler;
 
   @override
   void initState() {
@@ -12,7 +12,7 @@ mixin ResumeMixin<T extends StatefulWidget> on State<T> {
     _lifecycleEventHandler = LifecycleEventHandler(resumeCallBack: () async {
       onResume(context);
     });
-    WidgetsBinding.instance
+    WidgetsBinding.instance!
         .addObserver(_lifecycleEventHandler);
   }
 
@@ -26,6 +26,6 @@ mixin ResumeMixin<T extends StatefulWidget> on State<T> {
   @override
   void dispose() {
     super.dispose();
-    WidgetsBinding.instance.removeObserver(_lifecycleEventHandler);
+    WidgetsBinding.instance!.removeObserver(_lifecycleEventHandler);
   }
 }

@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
 class LifecycleEventHandler extends WidgetsBindingObserver {
-  final AsyncCallback resumeCallBack;
-  final AsyncCallback suspendingCallBack;
-  final AsyncCallback pausedCallBack;
-  final AsyncCallback inactiveCallBack;
+  final AsyncCallback? resumeCallBack;
+  final AsyncCallback? suspendingCallBack;
+  final AsyncCallback? pausedCallBack;
+  final AsyncCallback? inactiveCallBack;
 
   LifecycleEventHandler(
       {this.resumeCallBack,
@@ -18,22 +18,22 @@ class LifecycleEventHandler extends WidgetsBindingObserver {
     switch (state) {
       case AppLifecycleState.resumed:
         if (resumeCallBack != null) {
-          await resumeCallBack();
+          await resumeCallBack!();
         }
         break;
       case AppLifecycleState.inactive:
         if (inactiveCallBack != null) {
-          await inactiveCallBack();
+          await inactiveCallBack!();
         }
         break;
       case AppLifecycleState.paused:
         if (pausedCallBack != null) {
-          await pausedCallBack();
+          await pausedCallBack!();
         }
         break;
       case AppLifecycleState.detached:
         if (suspendingCallBack != null) {
-          await suspendingCallBack();
+          await suspendingCallBack!();
         }
         break;
     }
