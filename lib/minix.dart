@@ -12,8 +12,7 @@ mixin ResumeMixin<T extends StatefulWidget> on State<T> {
     _lifecycleEventHandler = LifecycleEventHandler(resumeCallBack: () async {
       onResume(context);
     });
-    WidgetsBinding.instance!
-        .addObserver(_lifecycleEventHandler);
+    WidgetsBinding.instance.addObserver(_lifecycleEventHandler);
   }
 
   /// 当用户熄灭屏幕后
@@ -26,6 +25,6 @@ mixin ResumeMixin<T extends StatefulWidget> on State<T> {
   @override
   void dispose() {
     super.dispose();
-    WidgetsBinding.instance!.removeObserver(_lifecycleEventHandler);
+    WidgetsBinding.instance.removeObserver(_lifecycleEventHandler);
   }
 }
