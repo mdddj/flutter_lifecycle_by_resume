@@ -9,7 +9,7 @@
 
 ### 添加依赖
 ```dart
-flutter_lifecycle_by_resume : ^0.0.4
+flutter_lifecycle_by_resume : ^2.0.0
 ```
 
 ### 快速使用
