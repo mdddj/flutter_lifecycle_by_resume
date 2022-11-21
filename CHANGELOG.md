@@ -1,3 +1,7 @@
+# 2.0.1
+
+* add `onPaused` fun
+
 # 2.0.0
 
 * update to 

@@ -9,9 +9,7 @@ mixin ResumeMixin<T extends StatefulWidget> on State<T> {
   @override
   void initState() {
     super.initState();
-    _lifecycleEventHandler = LifecycleEventHandler(resumeCallBack: () async {
-      onResume(context);
-    });
+    _lifecycleEventHandler = LifecycleEventHandler(resumeCallBack: () async => onResume(context),pausedCallBack: () async => onPaused(context));
     WidgetsBinding.instance.addObserver(_lifecycleEventHandler);
   }
 
@@ -21,6 +19,11 @@ mixin ResumeMixin<T extends StatefulWidget> on State<T> {
   ///
   /// 执行此方法
   void onResume(BuildContext context);
+
+
+  void onPaused(BuildContext context) {
+
+  }
 
   @override
   void dispose() {

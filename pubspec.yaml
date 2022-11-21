@@ -1,6 +1,6 @@
 name: flutter_lifecycle_by_resume
 description: flutter 息屏显示执行事件
-version: 2.0.0
+version: 2.0.1
 homepage: https://github.com/mdddj/flutter_lifecycle_by_resume.git
 
 environment:
